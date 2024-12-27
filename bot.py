@@ -1,11 +1,10 @@
 import asyncio
 from aiogram import Bot, Dispatcher
 from handlers import questions, group_games, usernames
+import config
 
-
-# Запуск бота
 async def main():
-    bot = Bot(token="8166147397:AAEKC3zSEBciLPl_Fat8G-jDjJtn27SLRoM")
+    bot = Bot(token=config.token)
     dp = Dispatcher()
 
     dp.include_routers(questions.router)
